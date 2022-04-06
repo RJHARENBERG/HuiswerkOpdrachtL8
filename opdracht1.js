@@ -9,12 +9,63 @@
 
 /*
 Opdracht 1 - Array Methoden
-    [] Opdracht 1a: Gebruik een array-methode om een array te maken met alle tv-type namen. Log de uitkomst in de console.
+    [v] Opdracht 1a: Gebruik een array-methode om een array te maken met alle tv-type namen. Log de uitkomst in de console.
         1. sla nieuwe array
-        2. maal map loop
-        3.
-    [] Opdracht 1b: Gebruik een array-methode om alle tv's te verzamelen (de hele objecten) die volledig uitverkocht zijn. Log de uitkomst in de console.
-    [] Opdracht 1c: Gebruik een array-methode om alle tv's te verzamelen (de hele objecten) die over AmbiLight beschikken. Log de uitkomst in de console.
+        2. maak map loop aan
+        3. sla alle namen op
+        4. print nieuwe array
+    [v] Opdracht 1b: Gebruik een array-methode om alle tv's te verzamelen (de hele objecten) die volledig uitverkocht zijn.
+        Log de uitkomst in de console.
+        1. sla nieuwe array
+        2. maak map loop aan
+        3. originalStock - sold is stock
+        4. if stock === 0 {"uitverkocht"}
+        5. print nieuwe array
+    [v] Opdracht 1c: Gebruik een array-methode om alle tv's te verzamelen (de hele objecten) die over AmbiLight beschikken.
+        Log de uitkomst in de console.
+        1. sla nieuwe array
+        2. maak filter loop aan
+        3. if inventory.options.ambiLight === true return inventory.type + inventory.name
+        3. print nieuwe array
+
     [] Opdracht 1d: Schrijf een functie die alle tv's van laagste naar hoogste prijs sorteert. Log de uitkomst in de console.
+        1. sla nieuwe array
+        2. maak filter loop aan
+        3. maak sort methode
+        4. sorteer op prijs
+        5. print nieuwe array
 */
-console.log("opdracht1")
+// console.log("opdracht1")
+
+//1a
+const namen = inventory.map((inventory) => {
+    return inventory.type;
+})
+console.log("uit komst op 1a: " + namen)
+
+//1b.
+const uitverkocht = inventory.map((inventory) => {
+    if ((inventory.originalStock - inventory.sold) === 0) {
+        return inventory.type + inventory.name
+
+    }
+})
+console.log("uit komst op 1b: " + uitverkocht)
+
+// 1c.
+const ambiLight = inventory.map((inventory) => {
+
+    if (inventory.options.ambiLight === true) {
+        return inventory.type + inventory.name;
+    }
+})
+console.log("uit komst op 1b: " + ambiLight)
+
+//1d.
+inventory.sort((a, b) => {
+    return a.price - b.price;
+});
+
+console.log("uit komst op 1d: " + inventory.map((inventory) => {
+    return inventory.price
+}))
