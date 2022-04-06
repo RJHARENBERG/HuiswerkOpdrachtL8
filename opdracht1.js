@@ -60,10 +60,10 @@ const ambiLight = inventory.map((inventory) => {
 console.log("uit komst op 1b: " + ambiLight);
 
 //1d.
-inventory.sort((a, b) => {
-    return a.price - b.price;
-});
+const prijsGesorteerdt = [...inventory]
 
-console.log("uit komst op 1d: " + inventory.map((inventory) => {
-    return inventory.price;
-}));
+prijsGesorteerdt.sort((a, b) => a.price - b.price);
+
+console.log(prijsGesorteerdt.map((inventory) => inventory.price))
+
+console.log("uit komst op 1d: " + inventory.map((inventory) => inventory.price));
