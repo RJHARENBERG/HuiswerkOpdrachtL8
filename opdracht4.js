@@ -30,7 +30,7 @@ Maak deze gehele opdracht eerst alsof je het voor één tv doet. We gaan één t
     [v] Opdracht 4d: Zorg ervoor de informatie van één van de tv's zoals het voorbeeld wordt weergegeven op de pagina.
         Gebruik hiervoor de functies die je hebt gemaakt in opdracht 5a, 5b en 5c.
 
-    [] Opdracht 4e: Schrijf een functie die ALLE tv's weergeeft op de pagina zoals in het voorbeeld. Dit wil je
+    [v] Opdracht 4e: Schrijf een functie die ALLE tv's weergeeft op de pagina zoals in het voorbeeld. Dit wil je
         natuurlijk niet acht keer opnieuw schrijven, want nu zijn het 8 tv's, maar in de toekomst misschien wel 200!
         Gebruik in deze functie de voorgaande functies die je hebt geschreven, om onderdelen van de data te formatten.
         De overkoepelende "tv-generator-functie" verwacht één parameter: de volledige array met tv-objecten.

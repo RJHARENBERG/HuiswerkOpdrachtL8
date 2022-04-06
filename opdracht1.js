@@ -50,6 +50,18 @@ const uitverkocht = inventory.map((inventory) => {
 });
 console.log("uit komst op 1b: " + uitverkocht);
 
+//bonus1.
+function productUitverkocht(arryOpject) {
+
+    const uitverkocht = inventory.map((inventory) => {
+        if ((inventory.originalStock - inventory.sold) === 0) {
+            return inventory.type + inventory.name;
+
+        }
+    });
+    return uitverkocht
+}
+
 // 1c.
 const ambiLight = inventory.map((inventory) => {
 
@@ -59,6 +71,17 @@ const ambiLight = inventory.map((inventory) => {
 });
 console.log("uit komst op 1b: " + ambiLight);
 
+//bonus1.
+function productAmbiLight(arryOpject) {
+    const ambiLight = inventory.map((inventory) => {
+
+        if (inventory.options.ambiLight === true) {
+            return inventory.type + inventory.name;
+        }
+    });
+    return ambiLight
+}
+
 //1d.
 const prijsGesorteerdt = [...inventory]
 
@@ -67,3 +90,13 @@ prijsGesorteerdt.sort((a, b) => a.price - b.price);
 console.log(prijsGesorteerdt.map((inventory) => inventory.price))
 
 console.log("uit komst op 1d: " + inventory.map((inventory) => inventory.price));
+
+//bonus1.
+
+function productPrijsGesorteerdt(arryOpject) {
+    const prijsGesorteerdt = [...arryOpject]
+
+    prijsGesorteerdt.sort((a, b) => a.price - b.price);
+
+    return prijsGesorteerdt
+}
