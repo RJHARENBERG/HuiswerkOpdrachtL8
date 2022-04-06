@@ -1,8 +1,5 @@
 // VOORRAAD ARRAY MET TV'S
 
-
-console.log("hoi")
-
 const inventory = [
   {
     type: '43PUS6504/12',
