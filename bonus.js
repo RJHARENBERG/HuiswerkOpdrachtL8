@@ -14,11 +14,53 @@ Bonusopdracht
     [v] b2.Zorg er nu voor, in plaats van dat de uitkomsten in de console worden gelogd, dat de uitkomsten worden meegegeven
         aan jouw generateTV-functie zodat de resultaten daadwerkelijk op de pagina weergegeven worden!
 */
-console.log("bonus")
+console.log("bonus");
 
 //bonus1.
 
 console.log("uit komst op bonus1: ");
+
+//bonus1b.
+function productUitverkocht(object) {
+
+    const uitverkocht = [];
+
+    object.map((inventory) => {
+        if ((inventory.originalStock - inventory.sold) === 0) {
+
+            uitverkocht.push(inventory);
+        }
+    });
+    console.log("productUitverkocht is geklikt " + uitverkocht.map((inventory) => inventory.name))
+    return uitverkocht
+}
+
+//bonus1c.
+function productAmbiLight(object) {
+
+    const ambiLightObject = [];
+
+    object.map((inventory) => {
+
+        if (inventory.options.ambiLight === true) {
+
+            ambiLightObject.push(inventory);
+
+        }
+    });
+    console.log("ambiLight is geklikt " + ambiLightObject.map((inventory) => inventory.name));
+    return ambiLightObject;
+}
+
+//bonus1c.
+function productPrijsGesorteerd(object) {
+    const prijsGesorteerd = [...object];
+
+    prijsGesorteerd.sort((a, b) => a.price - b.price);
+
+    console.log("prijsGesorteerdt is geklikt " + prijsGesorteerd.map((inventory) => inventory.price));
+    return prijsGesorteerd;
+}
 
 //bonus2.
 

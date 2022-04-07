@@ -49,8 +49,8 @@ function merkenAanbod(inventory) {
 
         document.getElementById("TvBrandList").appendChild(nieuwElement);
     }
-}
+
+};
 
 merkenAanbod(inventory);
-
 console.log("uit komst op 3b: uit komst is de list met TV merken op de pagina");

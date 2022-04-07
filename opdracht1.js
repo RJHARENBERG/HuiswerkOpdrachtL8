@@ -50,21 +50,6 @@ const uitverkocht = [...inventory].map((inventory) => {
 });
 console.log("uit komst op 1b: " + uitverkocht);
 
-//bonus1.
-function productUitverkocht(object) {
-
-    const uitverkocht = []
-
-    object.map((inventory) => {
-        if ((inventory.originalStock - inventory.sold) === 0) {
-
-            uitverkocht.push( inventory)
-        }
-    });
-    console.log("productUitverkocht is geklikt " + uitverkocht.map((inventory) => inventory.name))
-    return uitverkocht
-}
-
 // 1c.
 const ambiLight = inventory.map((inventory) => {
 
@@ -74,39 +59,11 @@ const ambiLight = inventory.map((inventory) => {
 });
 console.log("uit komst op 1c: " + ambiLight);
 
-//bonus1.
-function productAmbiLight(object) {
-
-    const ambiLightObject = []
-
-    object.map((inventory) => {
-
-        if (inventory.options.ambiLight === true) {
-
-            ambiLightObject.push(inventory)
-
-        }
-    });
-    console.log("ambiLight is geklikt " + ambiLightObject.map((inventory) => inventory.name))
-    return ambiLightObject
-}
-
 //1d.
 const prijsGesorteerdt = [...inventory]
 
 prijsGesorteerdt.sort((a, b) => a.price - b.price);
 
-console.log(prijsGesorteerdt.map((inventory) => inventory.price))
+// console.log(prijsGesorteerdt.map((inventory) => inventory.price));
 
 console.log("uit komst op 1d: " + inventory.map((inventory) => inventory.price));
-
-//bonus1.
-
-function productPrijsGesorteerd(object) {
-    const prijsGesorteerd = [...object]
-
-    prijsGesorteerd.sort((a, b) => a.price - b.price);
-
-    console.log("prijsGesorteerdt is geklikt " + prijsGesorteerd.map((inventory) => inventory.price))
-    return prijsGesorteerd
-}
