@@ -42,23 +42,23 @@ Maak deze gehele opdracht eerst alsof je het voor één tv doet. We gaan één t
 console.log("opdracht4")
 
 //4a.
-function productString(indexNum) {
-    return inventory[indexNum].brand + " " + inventory[indexNum].type + " - " + inventory[indexNum].name
+function productString(object, indexNum) {
+    return object[indexNum].brand + " " + object[indexNum].type + " - " + object[indexNum].name
 }
 
-console.log("uit komst op 4a: " + productString(1));
+console.log("uit komst op 4a: " + productString(inventory,1));
 
 //4b.
-function prijsFormat(indexNum) {
-    return "€" + inventory[indexNum].price + ",-"
+function prijsFormat(object, indexNum) {
+    return "€" + object[indexNum].price + ",-"
 }
 
-console.log("uit komst op 4b: " + prijsFormat(0));
+console.log("uit komst op 4b: " + prijsFormat(inventory,0));
 
 //4c.
-function schermString(indexNum) {
+function schermString(object, indexNum) {
 
-    const inches = [...inventory[indexNum].availableSizes];
+    const inches = [...object[indexNum].availableSizes];
     const schermGroteString = []
 
     for (let i = 0; i < inches.length; i++) {
@@ -71,12 +71,12 @@ function schermString(indexNum) {
     return schermGroteString.join().replaceAll(",", " ");
 }
 
-console.log("uit komst op 4c: " + schermString(0));
+console.log("uit komst op 4c: " + schermString(inventory,0));
 
 //4d.
-function productInfo(indexNum) {
+function productInfo(object, indexNum) {
 
-    const metodes = [productString(indexNum), prijsFormat(indexNum), schermString(indexNum)];
+    const metodes = [productString(object, indexNum), prijsFormat(object, indexNum), schermString(object, indexNum)];
     const tag = ["h3", "li", "li"];
 
     for (let i = 0; i < metodes.length; i++) {
@@ -86,19 +86,19 @@ function productInfo(indexNum) {
         productStringElement.appendChild(productStringInput);
         document.getElementById("TVInfo").appendChild(productStringElement);
     }
-
 }
 
-productInfo(0);
+productInfo(inventory,0);
 console.log("uit komst op 4d: uit komst is TV info op pagina");
 
 //4e.
-function productInfoAll(arryOpject) {
+function productInfoAll(object) {
 
-    for (let i = 0; i < arryOpject.length; i++) {
-        productInfo([i]);
+    for (let i = 0; i < object.length; i++) {
+        productInfo(object,[i]);
     }
 }
 
-productInfoAll(inventory);
+// productInfoAll(inventory)
+
 console.log("uit komst op 4e: uit komst is TV info op pagina");
