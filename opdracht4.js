@@ -13,7 +13,7 @@ Maak deze gehele opdracht eerst alsof je het voor één tv doet. We gaan één t
         parameter verwacht (zoals 379) en daar de volgende string van maakt: €379,-. Test of jouw functie ook werkt
         wanneer er een andere tv-prijs wordt meegegeven.
         1. haal de prijs uit inventoty[].prijs
-        2. wrap die in een funktie die een index nummer verwacht
+        2. wrap die in een functie die een index nummer verwacht
         3. return de inventoty[indexNum].prijs in een string met euro teken en ,-
 
     [v] Opdracht 4c: Zorg ervoor dat er een string wordt gegenereerd voor alle beschikbare schermgroottes van één tv,
@@ -64,9 +64,8 @@ function schermString(object, indexNum) {
         if ([i] < inches.length - 1) {
             schermGroteString.push("|");
         }
-
     }
-
+    console.log(schermGroteString)
     return schermGroteString.join().replaceAll(",", " ");
 }
 
@@ -75,8 +74,9 @@ console.log("uit komst op 4c: " + schermString(inventory, 0));
 //4d.
 function productInfo(object, indexNum) {
 
-    const metodes = [productString(object, indexNum), prijsFormat(object, indexNum), schermString(object, indexNum)];
-    const tag = ["h3", "li", "li"];
+    const metodes = [productString(object, indexNum), schermString(object, indexNum), prijsFormat(object, indexNum)];
+    const tag = ["h2", "li", "li"];
+
 
     for (let i = 0; i < metodes.length; i++) {
 
@@ -97,8 +97,11 @@ function productInfoAll(object) {
     for (let i = 0; i < object.length; i++) {
         productInfo(object, [i]);
     }
-
 }
 
 // productInfoAll(inventory);
 console.log("uit komst op 4e: uit komst is TV info op pagina");
+
+function empty() {
+    document.getElementById("text").innerHTML = "";
+}

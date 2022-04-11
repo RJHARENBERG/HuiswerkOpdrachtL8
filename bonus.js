@@ -4,7 +4,7 @@ Bonusopdracht
     [v] Sorteer op prijs,
     [v] AmbiLight TV's en
     [v] Uitverkochte exemplaren.
-    [v Gebruik de code die je in opdracht
+    [v] Gebruik de code die je in opdracht
     [v] 1b hebt gemaakt en schrijf dit om naar functies
     [v] 1c hebt gemaakt en schrijf dit om naar functies
     [v] 1d hebt gemaakt en schrijf dit om naar functies

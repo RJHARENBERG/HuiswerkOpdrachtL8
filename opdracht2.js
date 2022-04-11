@@ -63,7 +63,7 @@ let totaalIngekochtTVs = 0;
 for (let i = 0; i < ingekochtTVs.length; i++) {
     totaalIngekochtTVs += ingekochtTVs[i];
 }
-;
+
 console.log("uit komst op 2c: " + totaalIngekochtTVs);
 
 //2d.
