@@ -3,8 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Tech It Easy Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
 
+<h1>Tech It Easy Opdracht</h1>
+<h2 id="SoldTVs"></h2>
+<h2 id="IngekochtTVs"></h2>
+<h2 id="NogTeVerkopen"></h2>
+
+<h2>TV merken</h2>
+<ul id="TvBrandList"></ul>
+
+<h2>TV info</h2>
+
+
+    <button type="button" onclick="productInfoAll(productPrijsGesorteerd(inventory))" id="prijsGesorteerdt">Sorteer op
+        prijs
+    </button>
+    <button type="button" onclick="productInfoAll(productAmbiLight(inventory))" id="ambiLight">AmbiLight TV's</button>
+    <button type="button" onclick="productInfoAll(productUitverkocht(inventory))" id="uitverkocht">Uitverkochte
+        exemplaren
+    </button>
+
+
+<ul id="TVInfo"></ul>
+
+<script src="main.js"></script>
+<script src="opdracht1.js"></script>
+<script src="opdracht2.js"></script>
+<script src="opdracht3.js"></script>
+<script src="opdracht4.js"></script>
+<script src="bonus.js"></script>
 </body>
 </html>
